@@ -1,5 +1,7 @@
 # ActsAsQuickbooksModel
 
+[![Build Status](https://travis-ci.org/kickserv/acts_as_quickbooks_model.svg?branch=master)](https://travis-ci.org/kickserv/acts_as_quickbooks_model)
+
 ## Installation
 
 Add this line to your application's Gemfile:
