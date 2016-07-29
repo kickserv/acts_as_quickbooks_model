@@ -22,7 +22,8 @@ Or install it yourself as:
 
 ### Introduction ###
 
-This plugin simplifies the parsing of qbXML messages into ActiveRecord model attributes.
+This gem simplifies the parsing of qbXML messages into ActiveRecord model attributes.
+Based on [Zach Chandler's](https://github.com/zackchandler) original [acts_as_quickbooks_model Rails plugin](https://github.com/zackchandler/acts_as_quickbooks_model).
 
 ### Usage ###
 
