@@ -102,9 +102,6 @@ This plugin simplifies the parsing of qbXML messages into ActiveRecord model att
 
 ### Tested Ruby Versions ###
 
-* 1.8.6
-* 1.8.7
-* 1.9.1
 * 2.3.1
 
 ### References ###
