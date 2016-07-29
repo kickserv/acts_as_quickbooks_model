@@ -1,6 +1,7 @@
 require 'acts_as_quickbooks_model/version'
 require 'acts_as_quickbooks_model/parser'
 require 'hpricot'
+require 'active_record'
 
 Dir["#{File.dirname(__FILE__)}/../model_maps/*"]
   .each { |model_map| load model_map }

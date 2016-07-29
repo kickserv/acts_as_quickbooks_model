@@ -2,6 +2,7 @@ require 'rubygems'
 require 'active_record'
 require 'test/unit'
 require File.expand_path(File.dirname(__FILE__) + '/../lib/acts_as_quickbooks_model')
+
 ActiveRecord::Base.send :include, ActsAsQuickbooksModel
 
 config = YAML::load(IO.read(File.dirname(__FILE__) + '/database.yml'))

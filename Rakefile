@@ -1,6 +1,6 @@
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
-require 'lib/parser'
+require 'acts_as_quickbooks_model/parser'
 
 RSpec::Core::RakeTask.new(:spec)
 

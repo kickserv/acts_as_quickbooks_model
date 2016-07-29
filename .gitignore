@@ -1,9 +1,11 @@
 /.bundle/
 /.yardoc
+/*.sqlite3.db
 /Gemfile.lock
 /_yardoc/
 /coverage/
 /doc/
 /pkg/
 /spec/reports/
+/spec/debug.log
 /tmp/
