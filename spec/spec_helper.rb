@@ -2,6 +2,7 @@ require 'acts_as_quickbooks_model'
 require 'support/stubs'
 require 'support/fixtures'
 require 'active_record'
+require 'pry'
 
 ActiveRecord::Base.send :include, ActsAsQuickbooksModel
 

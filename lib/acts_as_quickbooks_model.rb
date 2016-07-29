@@ -40,7 +40,7 @@ module ActsAsQuickbooksModel
       # set qbxml attributes that exist in map and model
       model_qbxml_attributes = []
       qbxml_model_map.keys.each do |key|
-        if respond_to?("#{key}=") && self.class.reflections[key.to_sym].nil?
+        if respond_to?("#{key}=") && self.class.reflections[key.to_s].nil?
           model_qbxml_attributes << key
         end
       end
