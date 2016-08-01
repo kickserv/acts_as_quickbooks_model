@@ -1,5 +1,7 @@
 require 'acts_as_quickbooks_model/config'
 require 'acts_as_quickbooks_model/version'
+require 'acts_as_quickbooks_model/railtie' if defined?(Rails)
+
 require 'hpricot'
 require 'active_record'
 
