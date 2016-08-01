@@ -90,5 +90,3 @@ module ActsAsQuickbooksModel
     end
   end
 end
-
-ActiveRecord::Base.send :include, ActsAsQuickbooksModel

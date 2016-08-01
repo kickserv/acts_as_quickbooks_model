@@ -12,6 +12,8 @@ module ActsAsQuickbooksModel
         config.model_maps_path = Rails.root.join 'doc/acts_as_quickbooks_model/model_maps'
         config.migrations_path = Rails.root.join 'doc/acts_as_quickbooks_model/migrations'
       end
+
+      ActiveRecord::Base.send :include, ActsAsQuickbooksModel
     end
 
     rake_tasks do
