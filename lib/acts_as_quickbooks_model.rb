@@ -1,13 +1,25 @@
+require 'acts_as_quickbooks_model/config'
 require 'acts_as_quickbooks_model/version'
-require 'acts_as_quickbooks_model/parser'
 require 'hpricot'
 require 'active_record'
 
-Dir["#{File.dirname(__FILE__)}/../model_maps/*"]
-  .each { |model_map| load model_map }
-
 module ActsAsQuickbooksModel
+  attr_writer :configuration
+
+  def self.root
+    File.dirname __dir__
+  end
+
+  def self.configure
+    yield configuration
+  end
+
+  def self.configuration
+    @configuration ||= ActsAsQuickbooksModel::Config.new
+  end
+
   def self.included(base)
+    Dir["#{configuration.model_maps_path}/*"].each { |model_map| load model_map }
     base.extend(ClassMethods)
   end
 

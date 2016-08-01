@@ -7,7 +7,12 @@ class QbxmlJsonParser
 
       # write model map
       model_name = File.basename(src)[0..-6]
-      File.open("#{File.dirname(__FILE__)}/../model_maps/#{model_name}.rb", 'w+') do |f|
+
+      # TODO: change to config.doc_path
+      doc_path = "#{File.dirname(__FILE__)}/../doc"
+
+      # "#{File.dirname(__FILE__)}/../../doc/model_maps/*"
+      File.open("#{doc_path}/model_maps/#{model_name}.rb", 'w+') do |f|
         formatted_map = attributes.map{ |a| ":#{a[0]} => '#{a[1]}'" }.join(",\n      ")
         f.write <<-MAP
 # auto-generated from json definitions
@@ -27,7 +32,11 @@ end
     definitions.each do |src|
       attributes = intermediate_mapping(src)
       model_name = File.basename(src)[0..-6]
-      File.open("#{File.dirname(__FILE__)}/../migrations/#{model_name}.rb", 'w+') do |f|
+
+      # TODO: change to config.doc_path
+      doc_path = "#{File.dirname(__FILE__)}/../doc"
+
+      File.open("#{doc_path}/migrations/#{model_name}.rb", 'w+') do |f|
         columns = []
         attributes.map do |a|
           options = nil
@@ -74,7 +83,10 @@ end
   end
 
   def self.definitions
-    Dir["#{File.dirname(__FILE__)}/../definitions/**/*.json"]
+    # TODO: change to config.doc_path
+    doc_path = "#{File.dirname(__FILE__)}/../doc"
+
+    Dir["#{doc_path}/definitions/**/*.json"]
   end
 
   def self.intermediate_mapping(src)

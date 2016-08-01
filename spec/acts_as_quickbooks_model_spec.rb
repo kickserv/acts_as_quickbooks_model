@@ -5,6 +5,22 @@ describe ActsAsQuickbooksModel do
     expect(ActsAsQuickbooksModel::VERSION).not_to be nil
   end
 
+  describe ".configure" do
+    context "given options" do
+      let(:config) { described_class.configuration }
+
+      it "sets the options" do
+        described_class.configure do |c|
+          c.doc_path = 'foo'
+          c.migrations_path = 'bar'
+        end
+
+        expect(config.doc_path).to eq('foo')
+        expect(config.migrations_path).to eq('bar')
+      end
+    end
+  end
+
   let(:customer) { Customer.new(qbxml: CUSTOMER_RET, foo: 'bar') }
   let(:payment) { Payment.create!(qbxml: PAYMENT_RET) }
   let(:invoice) { Invoice.create!(qbxml: INVOICE_RET) }
