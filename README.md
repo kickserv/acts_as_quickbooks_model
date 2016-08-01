@@ -23,7 +23,7 @@ Or install it yourself as:
 ### Introduction ###
 
 This gem simplifies the parsing of qbXML messages into ActiveRecord model attributes.
-Based on [Zach Chandler's](https://github.com/zackchandler) original [acts_as_quickbooks_model Rails plugin](https://github.com/zackchandler/acts_as_quickbooks_model).
+Conversion of [Zach Chandler's](https://github.com/zackchandler) original [acts_as_quickbooks_model](https://github.com/zackchandler/acts_as_quickbooks_model) Rails plugin. Updated for ActiveRecord 4.
 
 ### Usage ###
 
@@ -117,7 +117,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/acts_as_quickbooks_model.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kickserv/acts_as_quickbooks_model.
 
 
 ## License
