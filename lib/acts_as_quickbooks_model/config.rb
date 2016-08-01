@@ -2,9 +2,6 @@ module ActsAsQuickbooksModel
   class Config
     attr_accessor :doc_path, :definitions_path, :migrations_path, :model_maps_path
 
-    ##
-    # @param [Hash{Symbol=>Object}] options the hash to be used to build the
-    #   config
     def initialize(options = {})
       self.doc_path = "#{ActsAsQuickbooksModel.root}/doc"
 
