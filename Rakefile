@@ -7,13 +7,11 @@ RSpec::Core::RakeTask.new(:spec)
 task default: :spec
 
 namespace :qb do
-  task all: [ :model_maps, :migrations ]
-
-  task :model_maps do
-    QbxmlJsonParser.generate_model_maps
+  task :model_maps, [:definitions_path, :model_maps_path] do |t, args|
+    QbxmlJsonParser.generate_model_maps args[:definitions_path], args[:model_maps_path]
   end
 
-  task :migrations do
-    QbxmlJsonParser.generate_migrations
+  task :migrations, [:definitions_path, :migrations_path] do |t, args|
+    QbxmlJsonParser.generate_migrations args[:definitions_path], args[:migrations_path]
   end
 end
