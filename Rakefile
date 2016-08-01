@@ -6,7 +6,7 @@ RSpec::Core::RakeTask.new(:spec)
 
 task default: :spec
 
-namespace :qb do
+namespace :acts_as_quickbooks_model do
   task :model_maps, [:definitions_path, :model_maps_path] do |_, args|
     QbxmlJsonParser.generate_model_maps args[:definitions_path], args[:model_maps_path]
   end
