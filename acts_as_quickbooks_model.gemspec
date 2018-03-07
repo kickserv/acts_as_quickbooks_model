@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Simplifies the parsing of qbXML messages into ActiveRecord model attributes}
   spec.description   = %q{Simplifies the parsing of qbXML messages into ActiveRecord model attributes}
-  spec.homepage      = 'TODO: Put your gem\'s website or public repo URL here.'
+  spec.homepage      = 'https://github.com/kickserv/acts_as_quickbooks_model'
   spec.license       = 'MIT'
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
